@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  border-radius: 26px;
+  text-transform: uppercase;
+  padding: rem(15) rem(35);
+  @include font-source (rem(16), 700, $main-color);
+  background-color: $btn-color;
+  &:hover {
+    box-shadow: 0px 0px 10px 0 $default-color;
+  }
+}

@@ -1,7 +1,9 @@
-@import "../../../styles/helpers/media";
-
 .header {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
   &__container {
+    width: 940px;
     display: flex;
     align-items: center;
     justify-content: space-between;
