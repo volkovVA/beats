@@ -1,0 +1,17 @@
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: rem(25);
+    &:last-child {
+      margin-right: 0;
+    }
+    &_active {
+      color: red;
+    }
+  }
+  &__link {
+    @include font-source (rem(16), 400);
+  }
+}

@@ -1,0 +1,12 @@
+include ../../components/logo/logo.pug
+include ../../components/menu/menu.pug
+include ../../components/phone/phone.pug
+
+header.header
+  .container.header__container
+    .header__logo
+      +logo('#logo')
+    .header__menu
+      +menu
+    .header__phone
+      +phone('+78007003030', '8 800 903 90 90', '#charging')

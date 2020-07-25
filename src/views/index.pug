@@ -2,10 +2,22 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "beats"
+	-
+		const items = [
+			{name: 'О нас', href: '#'},
+			{name: 'Наушники', href: '#'},
+			{name: 'Команда',href: '#'},
+			{name: 'Цвета',href: '#'},
+			{name: 'Отзывы',href: '#'},
+			{name: 'Как мы работаем',href: '#'},
+			{name: 'Контакты',href: '#'},
+		]
 
 block content
-
+	.wrapper
+		main.main
+			include ../blocks/modules/hero/hero
 block scripts
 	script(src="js/main.js")
 	script(src="js/vendor.js")

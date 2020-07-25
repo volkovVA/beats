@@ -1,0 +1,10 @@
+.phone {
+  &__number {
+    font-style: normal;
+    @include font-source (rem(21), 400);
+    &::before {
+      content: url('../img/phone.png');
+      padding-right: 5px;
+    }
+  }
+}
