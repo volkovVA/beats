@@ -1,0 +1,16 @@
+
+.player
+  #player__box
+    video.player__video(width="660" height="400")
+      source(src="../video/beats-solo2.mp4" type='video/mp4')
+      source(src="../video/beats-solo.webm" type='video/webm')
+  .player__controls
+    button.player__start
+    .player__progress
+      input#progress.player__progressline(value="0" max="100" min="0" type="range")
+    .player__duration
+      span.player__duration-completed 0:00
+      span.player__duration-estimate 0:00
+    .player__volume
+      button.player__volume-icon
+      input#volume.player__volume--progress(value="100" max="100" min="0" type="range")
