@@ -1,0 +1,7 @@
+mixin teamCard(src, srcRetina, name, profession, desc)
+  article.team-card
+    .team-card__photo
+      img.team-card__img(src=src srcset= srcRetina alt="фотография члена команды")
+    h3.team-card__name= name
+    span.team-card__profession= profession
+    p.team-card__desc= desc

@@ -46,6 +46,13 @@ block variables
 			//- 		{id: '#patent', text: 'Гарантия', value: '1год'}
 			//- 	], title: 'beats solo pro. цвет «красный цитрус»', exercise: '2 часа', weight: '215 грамм', price: '14990 р'}
 		]
+	-
+		const teamCards = [
+			{src: '../img/team/boris.png', srcRetina: '../img/team/boris@2x.png 1.25x, ../img/team/boris@3x.png 2.25x', name: 'Борис Федорович', proffesion: 'Главный технолог', desc: 'Отвечает за вкусовые качества и калорийность.'},
+			{src: '../img/team/alla.png', srcRetina: '../img/team/alla@2x.png 1.25x, ../img/team/alla@3x.png 2.25x', name: 'Алла Иванова', proffesion: 'Специалист по упаковке', desc: 'Автор запоминающегося стиля наших батончиков.'},
+			{src: '../img/team/kirill.png', srcRetina: '../img/team/kirill@2x.png 1.25x, ../img/team/kirill@3x.png 2.25x', name: 'Кирилл Матросов', proffesion: 'Дизайнер', desc: 'Разработал дизаннаушников beats solo 3.'},
+			{src: '../img/team/mila.png', srcRetina: '../img/team/mila@2x.png 1.25x, ../img/team/mila@3x.png 2.25x', name: 'Мила Рыжкова', proffesion: 'PR, маркетинг', desc: 'По всем вопросам сотрудничества и рекламы писать только Миле.'}
+		]
 
 block content
 	.wrapper
@@ -53,6 +60,7 @@ block content
 			include ../blocks/modules/hero/hero
 		include ../blocks/modules/why/why
 		include ../blocks/modules/slider/slider
+		include ../blocks/modules/team/team
 
 block scripts
 	script(src="js/main.js")
