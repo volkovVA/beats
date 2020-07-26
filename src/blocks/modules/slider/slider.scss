@@ -1,0 +1,19 @@
+.slider {
+  background-color: $secondfont-color;
+  &__container {
+    @include flex-center;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: rem(37);
+      height: rem(37);
+      background-color: $default-color;
+      transform: rotate(40deg);
+      bottom: rem(-35);
+      right: 0;
+    }
+  }
+}

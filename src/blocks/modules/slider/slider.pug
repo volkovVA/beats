@@ -1,0 +1,8 @@
+include ../../components/slide/slide.pug
+
+section.section.slider
+  .container.slider__container
+    .slider__list
+      each item in slideList
+        .slider__item
+          +slide(item.src, item.srcRetina, item.structure, item.title, item.exercise, item.weight, item.price)

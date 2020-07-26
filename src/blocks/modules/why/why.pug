@@ -6,8 +6,7 @@ section.section.why
       each item in whyList
         li.why__item
           .why__picture
-            <svg class="why__icon">
-              <use xlink:href="../img/svg/sprite.svg#{item.id}"></use>
-            </svg>
+            svg.class="why__icon"
+              use(xlink:href="../img/svg/sprite.svg" + item.id)
           span.why__text= item.text
           p.why__desc= item.desc

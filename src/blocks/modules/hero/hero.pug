@@ -9,9 +9,8 @@ section.hero
     ul.hero__list
       each item in heroList
         li.hero__item
-          <svg class="hero__item-icon">
-            <use xlink:href="../img/svg/sprite.svg#{item.id}"></use>
-          </svg>
+          svg.hero__item-icon
+            use(xlink:href="../img/svg/sprite.svg" + item.id)
           span.hero__item-text= item.text
     .hero__picture
       img.hero__img(src='../img/hero/MX452.png' srcset="../img/hero/MX452@2x.png 1.25x, ../img/hero/MX452@3x.png 2.25x" alt='наушники beats')

@@ -1,0 +1,27 @@
+include ../../components/btn/btn.pug
+
+mixin slide(src, srcRetina, structure, title, exercise, weight, price)
+  .slide
+    .slide__col
+      .slide__picture
+        img.slide__img(src= src srcset= srcRetina alt='наушники beats')
+    .slide__col
+      .slide__content
+        .slide__structure
+          svg.slide__structure-icon
+            use(xlink:href="../img/svg/sprite.svg#gear")
+          ul.slide__list
+            each el in structure
+              li.slide__item
+                svg.slide__icon
+                  use(xlink:href="../img/svg/sprite.svg" + el.id)
+                .slide__text= el.text
+                .slide__value= el.value
+        h2.slide__title= title
+        p.slide__desc Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.
+        ul.slide__features
+          li.slide__name Зарядка #[span.slide__exercise #{exercise}]
+          li.slide__name Вес #[span.slide__exercise #{weight}]
+        .slide__order
+          .slide__price= price
+          +btn('#', 'заказать')

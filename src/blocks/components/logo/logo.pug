@@ -1,6 +1,5 @@
 mixin logo(id)
   .logo
     a.logo__link(href="#")
-      <svg class="logo__icon">
-        <use xlink:href="../img/svg/sprite.svg#{id}"></use>
-      </svg>
+      svg.logo__icon
+        use(xlink:href="../img/svg/sprite.svg" + id)
