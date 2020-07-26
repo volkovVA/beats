@@ -1,0 +1,31 @@
+section.section.comments
+  .container.comments__container
+    h2.title.comments__title отзывы
+    ul.comments__list
+      each item, index in commentsList
+        if index === 0
+          li.comments__item.comments__item--active
+            article.comments__wrap
+              .comments__photo
+                img.comments__img(src= item.src srcset= item.srcRetina alt="аватарка пользователя")
+              .comments__content
+                h3.comments__header= item.header
+                p.comments__text= item.text
+                span.comments__user-name= item.user
+        else
+          li.comments__item
+            article.comments__wrap
+              .comments__photo
+                img.comments__img(src= item.src srcset= item.srcRetina alt="аватарка пользователя")
+              .comments__content
+                h3.comments__header= item.header
+                p.comments__text= item.text
+                span.comments__user-name= item.user
+    ul.comments__list-bottom
+      each item, index in commentsList
+        if index === 0
+          li.comments__item-bottom.comments__item-bottom--active
+            img.comments__img(src= item.src srcset= item.srcRetina alt="аватарка пользователя")
+        else
+          li.comments__item-bottom.comments__item-bottom
+            img.comments__img(src= item.src srcset= item.srcRetina alt="аватарка пользователя")

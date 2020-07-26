@@ -1,9 +1,5 @@
 .why {
   &__container {
-    position: relative;
-    height: 100%;
-    @include flex-center;
-    flex-direction: column;
     &::after {
       content: '';
       display: block;

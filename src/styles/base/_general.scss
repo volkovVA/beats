@@ -60,7 +60,13 @@ p {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 940px;
-  width: 95%;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 940px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

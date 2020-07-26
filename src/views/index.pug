@@ -53,6 +53,19 @@ block variables
 			{src: '../img/team/kirill.png', srcRetina: '../img/team/kirill@2x.png 1.25x, ../img/team/kirill@3x.png 2.25x', name: 'Кирилл Матросов', proffesion: 'Дизайнер', desc: 'Разработал дизаннаушников beats solo 3.'},
 			{src: '../img/team/mila.png', srcRetina: '../img/team/mila@2x.png 1.25x, ../img/team/mila@3x.png 2.25x', name: 'Мила Рыжкова', proffesion: 'PR, маркетинг', desc: 'По всем вопросам сотрудничества и рекламы писать только Миле.'}
 		]
+	-
+		const accordionList = [
+			{color: '#999999', name: '«Атласное серебро»'},
+			{color: '#151515', name: '«Чёрный матовый»'},
+			{color: '#e01f3d', name: '«Красный цитрус»'}
+		]
+
+	-
+		const commentsList = [
+			{src: '../img/comments/billi.png', srcRetina: '../img/comments/billi@2x.png 1.25x, ../img/comments/billi@3x.png 2.25x', header: 'Отличный звук', text: 'Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.', user: 'Билли Айлиш'},
+			{src: '../img/comments/vadim.png', srcRetina: '../img/comments/vadim@2x.png 1.25x, ../img/comments/vadim@3x.png 2.25x', header: 'Крутой дизайн', text: 'После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт. ', user: 'Вадим Грачёв'},
+			{src: '../img/comments/mariya.png', srcRetina: '../img/comments/mariya@2x.png 1.25x, ../img/comments/mariya@3x.png 2.25x', header: 'Надолго хватает заряда', text: 'Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.', user: 'Мария Орлова'}
+		]
 
 block content
 	.wrapper
@@ -62,6 +75,7 @@ block content
 		include ../blocks/modules/slider/slider
 		include ../blocks/modules/team/team
 		include ../blocks/modules/accordion/accordion
+		include ../blocks/modules/comments/comments
 
 block scripts
 	script(src="js/main.js")
