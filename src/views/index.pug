@@ -19,11 +19,41 @@ block variables
 			{id: '#charging', text: 'До 40 часов работы'},
 			{id: '#plug', text: 'Технология Fast Fuel'}
 		]
+	-
+		const whyList = [
+			{id: '#battery', text: '40 часов работы', desc: 'Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день.'},
+			{id: '#sound', text: 'Фирменное звучание', desc: 'Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.'},
+			{id: '#time', text: 'Быстрая зарядка', desc: 'Благодаря технологии Fast Fuel всего через 5 минут зарядки вы сможете слушать музыку ещё 3 часа.'}
+		]
+	-
+		const slideList = [
+			{	src: '../img/slider/MX452_AV3.png', srcRetina: '../img/slider/MX452_AV3@2x.png 1.25x, ../img/slider/MX452_AV3@3x.png 2.25x',
+				structure:
+				[
+					{id: '#bluetooth', text: 'Bluetooth', value: '4.0'},
+					{id: '#road', text: 'Дальность', value: '10м'},
+					{id: '#charger', text: 'Зарядка', value: '2ч'},
+					{id: '#kg', text: 'Вес', value: '215гр'},
+					{id: '#patent', text: 'Гарантия', value: '1год'}
+				], title: 'beats solo 3. цвет «атласное серебро»', exercise: '2 часа', weight: '215 грамм', price: '14990 р'},
+			//- {	src: '../img/slider/MV8T2_AV3.png', srcRetina: '../img/slider/MV8T2_AV3@2x 1.25x, ../img/MV8T2_AV3@3x.png 2.25x',
+			//- 	structure:
+			//- 	[
+			//- 		{id: '#bluetooth', text: 'Bluetooth', value: '4.0'},
+			//- 		{id: '#road', text: 'Дальность', value: '12м'},
+			//- 		{id: '#charger', text: 'Зарядка', value: '3ч'},
+			//- 		{id: '#kg', text: 'Вес', value: '215гр'},
+			//- 		{id: '#patent', text: 'Гарантия', value: '1год'}
+			//- 	], title: 'beats solo pro. цвет «красный цитрус»', exercise: '2 часа', weight: '215 грамм', price: '14990 р'}
+		]
 
 block content
 	.wrapper
 		main.main
 			include ../blocks/modules/hero/hero
+		include ../blocks/modules/why/why
+		include ../blocks/modules/slider/slider
+
 block scripts
 	script(src="js/main.js")
 	script(src="js/vendor.js")
