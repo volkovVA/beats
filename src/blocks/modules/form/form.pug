@@ -1,0 +1,52 @@
+include ../../components/btn/btn.pug
+include ../../components/form/form-input/form-input
+include ../../components/form/form-textarea/form-textarea
+include ../../components/form/form-radio/form-radio
+include ../../components/form/form-checkbox/form-checkbox
+
+section.section.form
+  .container.form__container
+    h2.title.form__title закажите доставку
+    form.form__box
+      .form__col
+        .form__row
+          .form__col
+            +form-input("Имя","name")
+            .form__error
+          .form__col
+            +form-input("Телефон","text")
+            .form__error
+        .form__row
+          .form__col
+            +form-input("Улица","street")
+            .form__error
+        .form__row
+          .form__col
+            +form-input("Дом","house")
+            .form__error
+          .form__col
+            +form-input("Корпус","housing")
+            .form__error
+          .form__col
+            +form-input("Квартира","apartment")
+            .form__error
+          .form__col
+            +form-input("Этаж","floor")
+            .form__error
+      .form__col
+        .form__row
+          .form__col
+            +form-textarea("Комментарий","comment")
+            .form__error
+        .form__row
+          .form__col
+            .form__radio-group
+              +form-radio("yes","Потребуется сдача")
+              +form-radio("no","Оплата по карте")
+        .form__row.form__row--mb
+          .form__col
+            +form-checkbox("checkbox", "yes", "Не перезванивать")
+        .form__row
+          .form__col
+            button.form__btn(type="submit") заказать
+            button.form__btn.form__btn--clear(type="reset") Очистить

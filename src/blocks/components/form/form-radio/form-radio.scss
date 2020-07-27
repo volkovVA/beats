@@ -1,0 +1,40 @@
+.radio {
+  &-group {
+      display: flex;
+  }
+  &__input {
+      position: absolute;
+      opacity: 0;
+      &:checked + .radio__content .radio__fake::after {
+          opacity: 1;
+      }
+  }
+  &__content {
+      display: flex;
+      align-items: center;
+      margin-right: rem(16px);
+  }
+  &__fake {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(24px);
+      height: rem(24px);
+      border-radius: 50%;
+      background-color: $main-color;
+      margin-right: 10px;
+      &::after {
+          content: "";
+          display: block;
+          width: rem(12px);
+          height: rem(12px);
+          background-color: $btn-color;
+          border-radius: 50%;
+          transition: .3s;
+          opacity: 0;
+      }
+  }
+  &__text {
+      color: $main-color;
+  }
+}
