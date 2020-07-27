@@ -1,1 +1,19 @@
-//
+.video {
+  background-color: $secondfont-color;
+  &__container {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: rem(-20);
+      height: 0;
+      width: 80px;
+      border-bottom: 40px solid $btn-color;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      transform: rotate(-25deg);
+    }
+  }
+}

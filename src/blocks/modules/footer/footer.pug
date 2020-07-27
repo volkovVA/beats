@@ -1,0 +1,21 @@
+include ../../components/phone/phone.pug
+include ../../components/socials/socials.pug
+
+-
+  let socials = [
+    {icon:'socials__link--telegram', href: 'https://telegram.org'},
+    {icon:'socials__link--vk', href: 'https://vk.com'},
+    {icon:'socials__link--facebook', href: 'https://facebook.com'},
+    {icon:'socials__link--instagram', href: 'https://instagram.com'}
+  ]
+
+
+footer.footer
+  .container.footer__container
+    .footer__col
+      span.footer__adress Москва, ул.Новый Арбат, д.31/12
+      .footer__phone
+        +phone('+78007003030', '8 800 903 90 90')
+    .footer__col
+      .footer__socials
+        +socials
