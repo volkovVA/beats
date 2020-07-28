@@ -18,7 +18,7 @@
     width: 14px;
     height: 0;
     border: 12px solid transparent;
-    border-left-color: $player-btn-color;
+    border-left-color: $player-elem-color;
     padding: 0;
     border-right-width: 0;
     background: transparent;
@@ -70,7 +70,7 @@
         width: 0;
         height: 0;
         border: 12px solid transparent;
-        border-right-color: $player-btn-color;
+        border-right-color: $player-elem-color;
         padding: 0;
         border-left-width: 0;
         background: transparent;
@@ -80,7 +80,7 @@
         cursor: pointer;
           &::before {
             content: "";
-            background: $player-btn-color;
+            background: $player-elem-color;
             border-radius: 50px;
             border: none;
             width: 10px;
@@ -100,7 +100,7 @@
             height: 15px;
             width: 15px;
             border-radius: 50%;
-            background: $btn-color;
+            background: $elem-color;
             cursor: pointer;
             -webkit-appearance: none;
           }
@@ -119,7 +119,7 @@
         height: 15px;
         width: 15px;
         border-radius: 50%;
-        background: $btn-color;
+        background: $elem-color;
         cursor: pointer;
         -webkit-appearance: none;
       }

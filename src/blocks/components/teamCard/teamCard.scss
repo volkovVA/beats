@@ -5,7 +5,7 @@
   &__photo {
     min-height: rem(288);
     overflow: hidden;
-    margin-bottom: rem(22);
+    margin-bottom: rem(20);
   }
   &__img {
     object-fit: cover;
@@ -23,7 +23,7 @@
       height: 0;
       border-left: rem(5) solid transparent;
       border-right: rem(5) solid transparent;
-      border-bottom: rem(10) solid $btn-color;
+      border-bottom: rem(10) solid $elem-color;
       right: rem(-20);
       top: 55%;
       transform: translateY(-50%);
@@ -37,7 +37,7 @@
         height: 0;
         border-left: rem(5) solid transparent;
         border-right: rem(5) solid transparent;
-        border-top: rem(10) solid $btn-color;
+        border-top: rem(10) solid $elem-color;
         right: rem(-20);
         top: 55%;
         transform: translateY(-50%);
@@ -46,10 +46,10 @@
   }
   &__profession {
     @include font-source (rem(16), 400, $teamcard-color);
-    margin-bottom: rem(13);
+    margin-bottom: rem(5);
   }
   &__desc {
-    @include font-source (rem(16), 400, $neutral-default);
+    @include font-source (rem(16), 400, $neutral-default-color);
     text-align: center;
   }
 }

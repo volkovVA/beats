@@ -7,9 +7,9 @@
       content: '';
       display: block;
       position: absolute;
-      width: 70px;
-      height: 15px;
-      background-color: $neutral-color;
+      width: 40px;
+      height: 10px;
+      background-color: $neutral-second-color;
       transform: rotate(-45deg);
       bottom: -6px;
       right: 5%;
@@ -17,16 +17,17 @@
   }
   &__title {
     width: rem(391);
-    margin-bottom: rem(32);
+    margin-bottom: rem(20);
+    line-height: 1.2;
   }
   &__text {
-    width: rem(320);
+    width: rem(330);
     @include font-source (rem(18), 400);
     margin-bottom: rem(39);
   }
   &__list {
     display: flex;
-    margin-top: rem(90);
+    margin-top: rem(94);
   }
   &__item {
     display: flex;
@@ -39,7 +40,7 @@
   &__item-icon {
     width: rem(44);
     height: rem(44);
-    padding-right: 5px;
+    padding-right: rem(5);
   }
   &__item-text {
     width: rem(97);

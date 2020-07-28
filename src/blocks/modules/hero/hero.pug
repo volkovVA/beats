@@ -5,7 +5,8 @@ section.hero
   .container.hero__container
     h1.title.hero__title беспроводные наушники beats solo 3
     h3.hero__text Встречайте новую версию наушников из линейки Powerbeats.
-    +btn('#', 'заказать')
+    .hero__btn
+      +btn('#', 'заказать')
     ul.hero__list
       each item in heroList
         li.hero__item

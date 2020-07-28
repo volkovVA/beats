@@ -17,46 +17,30 @@ $mobileFontSize          : 14px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.42;
 
+// Font color
+
+$mainfont-color          : #ffffff;
+$secondfont-color        : #f5f5f5;
+
 // Main color
 
 $default-color           : #000000;
 $main-color              : #ffffff;
+
+// Element color
+
+$elem-color              : #e01f3d;
+$elem-hover-color        : #ca1b36;
 $price-color             : #0d0d0d;
 $structure-color         : #6e6e6e;
 $teamcard-color          : #281e1e;
-
-$line-color: #303030;
-$d6: #010101;
-$accordion-bg-content-color: #333537;
-
-$mainfont-color          : #ffffff;
-$secondfont-color        : #f5f5f5;
-$danger-color            : #e42424;
-$btn-color               : #e01f3d;
-$r: #ca1b36;
+$line-color              : #303030;
+$accordion-bg-color      : #333537;
+$neutral-icon-color      : #f5f5f5;
+$form-text-color         : #f8faf9;
+$player-elem-color       : #efebeb;
 
 // Neutral Color
 
-$neutral-default         : #666666;
-$neutral-color           : #999999;
-$neutral-icon-color      : #f5f5f5;
-$neutral-dark-color      : #151515;
-$n3: #b2b2b2;
-$n5: #9a9a9a;
-
-$label-text-color: #f8faf9;
-$l3: #efefef;
-$player-btn-color: #efebeb;
-$l5: #cfdeda;
-
-
-// $neutral-primary         : #303133;
-// $neutral-regular         : #606266;
-// $neutral-secondary       : #909399;
-// $neutral-placeholder     : #C0C4CC;
-
-// // Border Color
-// $border-base             : #DCDFE6;
-// $border-light            : #E4E7ED;
-// $border-lighter          : #EBEEF5;
-// $border-lightex          : #F2F6FC;
+$neutral-default-color         : #666666;
+$neutral-second-color           : #999999;
