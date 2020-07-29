@@ -1,4 +1,8 @@
 .yandex-map {
+  @include media-tablet-horizontal {
+    height: 100vh;
+    padding: 0;
+  }
   &__title {
     display: none;
   }

@@ -18,16 +18,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: rem(24px);
-      height: rem(24px);
+      width: rem(24);
+      height: rem(24);
       border-radius: 50%;
       background-color: $main-color;
       margin-right: 10px;
       &::after {
           content: "";
           display: block;
-          width: rem(12px);
-          height: rem(12px);
+          width: rem(12);
+          height: rem(12);
           background-color: $elem-color;
           border-radius: 50%;
           transition: .3s;

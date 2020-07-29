@@ -9,8 +9,11 @@
       height: rem(25);
       background-color: $default-color;
       transform: rotate(30deg);
-      bottom: rem(-30);
+      bottom: rem(-10);
       right: 0;
+      @include media-laptop {
+        bottom: rem(-30);
+      }
     }
   }
 }

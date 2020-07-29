@@ -12,7 +12,7 @@
     background-image: url('../img/accordion/bg-accordion@3x.png');
   }
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     display: flex;
@@ -21,26 +21,62 @@
     top: 0;
     left: 0;
   }
+  @include media-tablet-horizontal {
+    height: 100vh;
+    padding: 0;
+  }
   &__title {
-    padding-top: rem(93);
-    padding-left: rem(74);
     color: $main-color;
-    z-index: 1;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 20%;
+    left: rem(-20);
+    @include media-laptop {
+      position: static;
+      transform: rotate(0);
+      padding-top: rem(93);
+      padding-left: rem(74);
+    }
   }
   &__list {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    position: relative;
+    justify-content: flex-end;
   }
   &__list, &__item {
     height: 100%;
     display: flex;
   }
   &__item {
+    opacity: 1;
+    transition: opacity .5s;
     &--active {
+      margin-right: auto;
       .accordion__content-wrap {
-        width: 33rem;
+        width: 77vw;
+      }
+      .accordion__content {
+        min-width: 77vw;
+        padding: rem(80) rem(25) 0;
+      }
+      & ~ .accordion__item {
+        position: absolute;
+        transition: opacity .5s;
+        opacity: 0;
+      }
+      @include media-laptop {
+        margin-right: 0;
+        .accordion__content-wrap {
+          width: 34rem;
+        }
+        .accordion__content {
+          min-width: 34rem;
+          padding: rem(34) rem(115) 0 rem(30);
+        }
+        & ~ .accordion__item {
+          position: relative;
+          opacity: 1;
+        }
       }
     }
   }
@@ -73,6 +109,7 @@
     white-space: nowrap;
     height: rem(100);
     transform-origin: 0 0;
+    margin-bottom: rem(-45);
   }
   &__text {
     @include font-source (rem(16), 400, $main-color);

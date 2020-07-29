@@ -1,12 +1,13 @@
 section.section.why
   .container.why__container
-    h2.title почему beats solo 3?
-    h3.why__title Процессор W1 работает невероятно эффективно и позволяет легко подключать наушники к различным устройствам Apple.
-    ul.why__list
+    h2.title.why__title почему beats solo 3?
+    h3.why__second-title Процессор W1 работает невероятно эффективно и позволяет легко подключать наушники к различным устройствам Apple.
+    .why__list
       each item in whyList
-        li.why__item
+        .why__item
           .why__picture
             svg.why__icon
               use(xlink:href="../img/svg/sprite.svg" + item.id)
-          span.why__text= item.text
-          p.why__desc= item.desc
+          .why__content
+            span.why__text= item.text
+            p.why__desc= item.desc

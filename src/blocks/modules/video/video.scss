@@ -7,16 +7,26 @@
       display: block;
       position: absolute;
       right: 0;
-      bottom: rem(-20);
+      bottom: rem(-30);
       height: 0;
-      width: 80px;
-      border-bottom: 40px solid $elem-color;
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
+      width: 50px;
+      border-bottom: 20px solid $elem-color;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
       transform: rotate(-25deg);
+      @include media-laptop {
+        width: rem(80);
+        border-bottom: 40px solid $elem-color;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+      }
     }
   }
   &__title {
     margin-bottom: rem(17);
+    text-align: center;
+    @include media-laptop {
+      margin-bottom: rem(35);
+    }
   }
 }

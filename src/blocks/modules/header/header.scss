@@ -1,12 +1,78 @@
 .header {
   position: absolute;
+  z-index: 20;
   right: 50%;
   transform: translateX(50%);
   &__container {
-    width: 940px;
+    width: 100vw;
     flex-direction: row;
     justify-content: space-between;
     height: 100%;
-    padding: rem(18) 0;
+    padding: rem(18) rem(25);
+    @include media-laptop {
+      width: 940px;
+      padding: rem(18) 0;
+    }
+  }
+  &__burger {
+    display: block;
+    position: relative;
+    background-color: #000;
+    width: rem(30);
+    height: 4px;
+    transition: .4s;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: rem(-10);
+      background: #000;
+      width: 100%;
+      height: 4px;
+      transition: .4s;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: rem(-10);
+      background: #000;
+      width: 100%;
+      height: 4px;
+      transition: .4s;
+    }
+    @include media-laptop {
+      display: none;
+    }
+  }
+  &__menu {
+    display: none;
+    &--active {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transition: opacity .5s;
+      overflow: hidden;
+      background-color: rgba(0,0,0,.7);
+      @include flex-center;
+      & .menu__list {
+        display: block;
+      }
+      & .menu__link {
+        color: $main-color;
+        @include font-source (rem(30), 400);
+      }
+      & .menu__item {
+        margin-right: 0;
+        margin-bottom: rem(20);
+        text-align: center;
+      }
+    }
+    @include media-laptop {
+      display: block;
+    }
   }
 }

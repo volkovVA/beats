@@ -3,11 +3,14 @@
     display: block;
     width: 100%;
     border: none;
-    padding: 1.2rem;
+    padding: 0.6rem;
     transition: outline .1s;
     &:focus {
       outline: 3px solid $elem-color;
       transition: outline .1s;
+    }
+    @include media-laptop {
+      padding: 1.2rem;
     }
   }
   &__text {

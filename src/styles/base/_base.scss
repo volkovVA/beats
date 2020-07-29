@@ -5,6 +5,10 @@
 
 .section {
   height: 100vh;
+  @include media-tablet-horizontal {
+    height: 100%;
+    padding: rem(40);
+  }
 }
 
 button {

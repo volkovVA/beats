@@ -4,7 +4,11 @@
     height: 100%;
   }
   &__icon {
-    width: rem(42);
-    height: rem(42);
+    width: rem(57);
+    height: rem(57);
+    @include media-laptop {
+      width: rem(42);
+      height: rem(42);
+    }
   }
 }

@@ -1,5 +1,14 @@
 .player {
   position: relative;
+  &__box {
+    @include media-laptop {
+      width: rem(660);
+    }
+  }
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
   &__controls {
     display: flex;
     align-items: center;
@@ -9,10 +18,12 @@
     right: 0;
     bottom: -14px;
     height: 35px;
-    padding-right: 20px;
     background: black;
     background: -webkit-linear-gradient(to bottom, #434343, #000);
     background: linear-gradient(to bottom, #434343, #000);
+    @include media-laptop {
+      padding-right: rem(20);
+    }
   }
   &__start {
     width: 14px;
@@ -112,7 +123,7 @@
   }
   &__progressline {
     height: 4px;
-    width: 350px;
+    width: 100%;
     -webkit-appearance: none;
     background: $line-color;
       &::-webkit-slider-thumb {
@@ -123,6 +134,9 @@
         cursor: pointer;
         -webkit-appearance: none;
       }
+    @include media-laptop {
+     width: rem(350);
+    }
   }
 }
 

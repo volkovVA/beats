@@ -7,14 +7,15 @@
 html {
     box-sizing: border-box;
     height: 100%;
-    @include media-laptop {
-        font-size: $mainFontSize;
+    font-size: $mainFontSize;
+    @include media-mobile {
+        font-size: $mobileFontSize;
     }
     @include media-tablet {
         font-size: $tabletFontSize;
     }
-      @include media-mobile {
-        font-size: $mobileFontSize;
+    @include media-laptop {
+        font-size: $mainFontSize;;
     }
 }
 

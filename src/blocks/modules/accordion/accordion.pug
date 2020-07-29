@@ -1,8 +1,8 @@
 section.section.accordion
   h2.title.accordion__title цвета
-  ul.accordion__list
+  .accordion__list
     each item in accordionList
-      li.accordion__item
+      .accordion__item
         button.accordion__btn(style="background-color:" + item.color)
           span.accordion__name= item.name
         .accordion__content-wrap

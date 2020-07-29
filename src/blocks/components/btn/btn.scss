@@ -1,11 +1,15 @@
 .btn {
   display: inline-block;
-  border-radius: 26px;
+  border-radius: 30px;
   text-transform: uppercase;
-  padding: rem(15) rem(41);
+  padding: rem(25) rem(60);
   @include font-source (rem(16), 700, $main-color);
   background-color: $elem-color;
   &:hover {
     box-shadow: 0px 0px 10px 0 $default-color;
+  }
+  @include media-laptop {
+    border-radius: rem(26);
+    padding: rem(15) rem(41);
   }
 }

@@ -3,7 +3,7 @@ include ../../components/teamCard/teamCard.pug
 section.section.team
   .container.team__container
     h2.title.team__title команда
-    ul.team__list
+    .team__list
       each item in teamCards
-        li.team__item
+        .team__item
           +teamCard(item.src, item.srcRetina, item.name, item.proffesion, item.desc)

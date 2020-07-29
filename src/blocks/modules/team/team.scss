@@ -4,8 +4,42 @@
   }
   &__list {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex-center;
+    flex-direction: column;
     flex-wrap: wrap;
+    @include media-laptop {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  &__item {
+    margin-bottom: rem(30);
+    &--active {
+      .team-card__name {
+        @include font-source (rem(18), 700);
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: rem(5) solid transparent;
+          border-right: rem(5) solid transparent;
+          border-bottom: none;
+          border-top: rem(10) solid $elem-color;
+          right: rem(-20);
+          top: 55%;
+          transform: translateY(-50%);
+        }
+      }
+      .team-card__photo, .team-card__profession, .team-card__desc {
+        display: block;
+      }
+    }
+    @include media-laptop {
+      order: 2;
+    }
   }
 }
