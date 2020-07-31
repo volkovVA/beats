@@ -80,5 +80,8 @@
         "*.js": [
             "eslint --fix --color"
         ]
+    },
+    "dependencies": {
+        "swipejs": "^2.2.18"
     }
 }

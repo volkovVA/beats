@@ -1,19 +1,68 @@
 .slider {
-  background-color: $secondfont-color;
-  &__container {
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: rem(25);
-      height: rem(25);
-      background-color: $default-color;
-      transform: rotate(30deg);
-      bottom: rem(-10);
-      right: 0;
-      @include media-laptop {
-        bottom: rem(-30);
-      }
+    background-color: $secondfont-color;
+    &__container {
+        align-items: stretch;
+        position: relative;
+        &::after {
+            @include media-laptop {
+                bottom: rem(-30);
+            }
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: rem(-10);
+            width: rem(25);
+            height: rem(25);
+            transform: rotate(30deg);
+            background-color: $default-color;
+        }
     }
-  }
+    &__btn {
+        @include media-tablet {
+            top: 30%;
+        }
+        @include media-laptop {
+            top: 50%;
+        }
+        position: absolute;
+        z-index: 1;
+        top: 25%;
+        width: rem(50);
+        height: rem(50);
+        border-top: 7px solid $default-color;
+        border-right: 7px solid $default-color;
+        border-radius: 5px;
+        cursor: pointer;
+        &--prev {
+            @include media-laptop {
+                left: -5%;
+            }
+            left: 5%;
+            transform: rotate(-135deg);
+        }
+        &--next {
+            @include media-laptop {
+                right: -5%;
+            }
+            right: 5%;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.swipe {
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+}
+.swipe-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.swipe-wrap > div {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    float: left;
 }

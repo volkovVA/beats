@@ -2,7 +2,11 @@ include ../../components/slide/slide.pug
 
 section.section.slider
   .container.slider__container
-    .slider__list
-      each item in slideList
-        .slider__item
-          +slide(item.src, item.srcRetina, item.structure, item.title, item.exercise, item.weight, item.price)
+    .slider__buttons
+      button.slider__btn.slider__btn--prev#prev
+      button.slider__btn.slider__btn--next#next
+    #slider.swipe
+      .slider__list.swipe-wrap
+        each item in slideList
+          .slider__item
+            +slide(item.src, item.srcRetina, item.structure, item.title, item.exercise, item.weight, item.price)
